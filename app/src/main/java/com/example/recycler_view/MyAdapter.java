@@ -2,6 +2,7 @@ package com.example.recycler_view;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,18 @@ public class MyAdapter extends RecyclerView.Adapter<FoodViewHolder>{
         holder.mDecription.setText(MyFoodlist.get(position).getItemDec());
         holder.mPrice.setText(MyFoodlist.get(position).getItemPrice());
 
+
+       holder.cardView.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent=new Intent(mContext,Items_Details.class);
+               intent.putExtra("Image",MyFoodlist.get(holder.getAbsoluteAdapterPosition()).getItemImage());
+               intent.putExtra("Description",MyFoodlist.get(holder.getAbsoluteAdapterPosition()).getItemDec());
+               intent.putExtra("Price",MyFoodlist.get(holder.getAbsoluteAdapterPosition()).getItemPrice());
+               intent.putExtra("Name",MyFoodlist.get(holder.getAbsoluteAdapterPosition()).getItemName());
+               mContext.startActivity(intent);
+           }
+       });
 
 
 

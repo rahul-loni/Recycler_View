@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
        recyclerView=findViewById(R.id.recycle);
-       GridLayoutManager gridLayoutManager=new GridLayoutManager(MainActivity.this,2);
+       GridLayoutManager gridLayoutManager=new GridLayoutManager(MainActivity.this,1);
        recyclerView.setLayoutManager(gridLayoutManager);
 
        myFoodList=new ArrayList<>();
@@ -31,18 +31,18 @@ public class MainActivity extends AppCompatActivity {
         myFoodList.add(modelClass);
 
 
-        modelClass=new ModelClass(R.drawable.pizza1,"Burger King",
-                "Burger King India, which launched operations in the country five year","Rs.400");
+        modelClass=new ModelClass(R.drawable.pizza1,"Burger ",
+                "Burger King India, which launched operations in the country five year","Rs.200");
         myFoodList.add(modelClass);
 
 
-        modelClass=new ModelClass(R.drawable.burger,"Burger King",
-                "Burger King India, which launched operations in the country five year","Rs.400");
+        modelClass=new ModelClass(R.drawable.burger,"Pizza",
+                "Burger King India, which launched operations in the country five year","Rs.300");
         myFoodList.add(modelClass);
 
 
-        modelClass=new ModelClass(R.drawable.burger1,"Burger King",
-                "Burger King India, which launched operations in the country five year","Rs.400");
+        modelClass=new ModelClass(R.drawable.burger1,"Pizza King",
+                "Burger King India, which launched operations in the country five year","Rs.500");
         myFoodList.add(modelClass);
 
 
